@@ -17,4 +17,4 @@ spec:
       - image: 921418220591.dkr.ecr.ap-southeast-1.amazonaws.com/paocloud-info:v9
         name: paocloud-info
         ports:
-        - containerPort: 80
+        - containerPort: 8080
