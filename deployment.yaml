@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paocloud-info
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: paocloud-info
+  template:
+    metadata:
+      labels:
+        app: paocloud-info
+    spec:
+      containers:
+      - image: 921418220591.dkr.ecr.ap-southeast-1.amazonaws.com/paocloud-info:v9
+        name: paocloud-info
+        ports:
+        - containerPort: 80
